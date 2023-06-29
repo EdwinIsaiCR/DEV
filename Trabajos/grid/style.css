@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+#principal{
+    background-color: aqua;
+    grid-column: 2/4;
+}
+
+@media screen and (min-width:300px) {
+    section{
+    background-color:gold ;
+    border-style: solid;
+    border-color: black;
+    grid-column: span 2;
+   }
+}
+
+@media screen and (max-width:300px) {
+    section{
+    background-color:rgb(20, 238, 93) ;
+    border-style: solid;
+    border-color: rgb(233, 8, 8);
+    grid-column: span 4;
+   }
+}
