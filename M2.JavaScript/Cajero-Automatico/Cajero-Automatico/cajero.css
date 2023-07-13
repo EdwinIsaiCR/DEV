@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(https://i.blogs.es/45ac57/fondo-pantalla-wallpaper-windows-xp-microsoft-set-nostalgia/1366_2000.jpg);
+    background-size: cover;
+
+}
+
+.cajero{
+    position: relative;
+    /* align-items: center;
+    justify-content: center;
+    text-align: center; */
+    background-color: dodgerblue;
+    width: 40vh;
+    /*height: 20vh; */
+    
+}
+.acciones{
+    padding: 5px;
+    background-color: grey;
+}
+.pantalla{
+    margin: 10px;
+    position: relative;
+    height: 10vh;
+    background-color: white;
+}
+.botones{
+    padding: 5px;
+    background-color: grey;
+    height: 80%;
+}
+.botones button{
+    width: 30%;
+}
