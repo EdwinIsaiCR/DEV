@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="" width="150px">
+            <div class="buscas">
+                <form action="" method="post" id="form">
+                    <div class="group">      
+                        <input type="text" name="nombre-pokemon" id="nombre-pokemon" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="nombre-pokemon">Buscar pokemon por su nombre: </label>
+                        
+                    </div>  
+                    <button type="submit" class="btn mt-4">Mostrar</button>
+                    <button class="btn" id="refresh">Recargar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="pokemones">
+        </div> 
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+            <p>Creado por: Edwin Isai Cruz Ramirez</p>
+        </div>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
