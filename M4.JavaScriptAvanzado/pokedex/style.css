@@ -450,3 +450,27 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
     line-height: 1.8;
   }
 }
+
+@media (max-width: 600px) {
+  nav{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  input {
+    margin: 5px;
+    font-size:11px;
+    width: 250px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .btn{
+    width: 100px;
+  }
+}
