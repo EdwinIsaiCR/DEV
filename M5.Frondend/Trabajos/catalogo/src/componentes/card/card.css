@@ -1,0 +1,31 @@
+.container-card {
+    width: 250px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgb(0, 0,0, 0.1);
+    margin: 25px;
+}
+
+.container-card img {
+    width: 100%;
+}
+
+.container-card h1 {
+    font-size: 16px;
+}
+
+.container-card-subtitle {
+    color: grey;
+}
+
+.container-card p {
+    font-size: 14px;
+}
+
+.red-icon{
+    color: red;
+}
+
+.heart{
+    margin-right: 5px;
+    text-align: end;
+}

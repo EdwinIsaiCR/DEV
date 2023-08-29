@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  position: relative;
+    padding-bottom: 10rem;
+    min-height: 100vh;
+}
+.test {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}

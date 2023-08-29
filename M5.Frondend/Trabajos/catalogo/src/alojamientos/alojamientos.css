@@ -1,0 +1,23 @@
+.container-alojamientos {
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 60%;
+    /* max-width: 1000px; */
+	margin: 0 auto;
+}
+.alojamiento-title{
+    max-width: 1000px;
+    padding: 10px;
+	margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container-alojamientos {
+        
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        
+    }
+  }
