@@ -1,12 +1,14 @@
-import '@/styles/form.css'
-import logo from '@/assets/react.svg'
 import { useForm } from 'react-hook-form'
 import { registerUserService } from '@/services/userServices'
 import { useNavigate } from 'react-router-dom'
+import '@/styles/form.css'
+import logo from '@/assets/react.svg'
 
 const Signup = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
+
   const navigate = useNavigate()
+
   const onSubmit = async (data) => {
     try {
       const response = await registerUserService(data)
