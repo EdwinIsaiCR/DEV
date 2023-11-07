@@ -38,6 +38,7 @@ const Login = () => {
         <div className='form-floating'>
           <input
             type='email'
+            name='email'
             className='form-control'
             id='floatingInput'
             placeholder='name@example.com'
@@ -48,6 +49,7 @@ const Login = () => {
         <div className='form-floating'>
           <input
             type='password'
+            name='password'
             className='form-control'
             id='floatingPassword'
             placeholder='Password'
