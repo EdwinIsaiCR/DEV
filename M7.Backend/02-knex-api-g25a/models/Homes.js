@@ -29,9 +29,25 @@ const update = (houseId, body) => {
     .returning(['*'])
 }
 
+const destroy = (houseId) => {
+  return knex
+    .del()
+    .from('homes')
+    .where('house_id', houseId)
+}
+
+const softDelete = (houseId) => {
+  return knex
+    .update({ active: false })
+    .from('homes')
+    .where('house_id', houseId)
+}
+
 module.exports = {
   create,
   findAll,
   findOne,
-  update
+  update,
+  destroy,
+  softDelete
 }
