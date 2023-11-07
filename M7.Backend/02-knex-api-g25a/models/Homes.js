@@ -21,8 +21,17 @@ const findOne = (houseId) => {
     .where('active', true)
 }
 
+const update = (houseId, body) => {
+  return knex
+    .update(body)
+    .table('homes')
+    .where('house_id', houseId)
+    .returning(['*'])
+}
+
 module.exports = {
   create,
   findAll,
-  findOne
+  findOne,
+  update
 }
