@@ -1,17 +1,27 @@
 import { useState, useEffect } from 'react'
 import { getAllItemsService } from '@/services/itemServices'
+<<<<<<< HEAD
+
+const Home = () => {
+  const [itemsList, setItemsList] = useState([])
+=======
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 const Home = () => {
   const [itemsList, setItemList] = useState([])
+>>>>>>> c77ee10ca9442226bd08555027659beecd581821
 
   useEffect(() => {
     const fetchItemsData = async () => {
       try {
         const response = await getAllItemsService()
         if (response.status === 200) {
+<<<<<<< HEAD
+          setItemsList(response.data)
+=======
           setItemList(response.data)
+>>>>>>> c77ee10ca9442226bd08555027659beecd581821
         }
       } catch (error) {
         console.log('Ocurrio un error en Home', error)
@@ -19,7 +29,10 @@ const Home = () => {
     }
     fetchItemsData()
   }, [])
+<<<<<<< HEAD
+=======
 
+>>>>>>> c77ee10ca9442226bd08555027659beecd581821
   return (
     <>
       <h1>Home</h1>
