@@ -6,12 +6,24 @@ const createHome = (req, res) => {
   }) */
   ModelHomes.create(req.body)
     .then(row => {
-      res.status(201).send(row)
+      res.status(201).send({ message: 'Home Created', data: row })
     })
     .catch(err => {
-      res.status(400).send(err.message)
+      res.status(400).send({ message: 'Error creating home', err })
     })
 }
+
+const findAllHomes = (req, res) => {
+  ModelHomes.findAll()
+    .then(rows => {
+      res.status(20).send(rows)
+    })
+    .catch(err => {
+      res.status(400).send({ message: 'Error listing home', err })
+    })
+}
+
 module.exports = {
-  createHome
+  createHome,
+  findAllHomes
 }

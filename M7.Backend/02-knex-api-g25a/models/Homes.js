@@ -6,6 +6,14 @@ const create = (body) => {
     .returning(['house_id', 'tile', 'description', 'guests', 'address', 'rental_price', 'fk_user', 'active', 'created_at'])
 }
 
+const findAll = () => {
+  return knex
+    .select('*')
+    .from('homes')
+    .where('active', true)
+}
+
 module.exports = {
-  create
+  create,
+  findAll
 }
