@@ -9,6 +9,9 @@ const pedidoSchema = mongoose.Schema({
     pedido: {
         type: String,
         required: [true, "Por favor teclea el producto que estara en el pedido"]
+    },
+    productos: {
+        type: Array,
     }
 }, {
     timestamps: true

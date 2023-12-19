@@ -7,12 +7,13 @@ const getPedidos = asyncHandler( async (req, res) =>{
 })
 
 const setPedidos = asyncHandler( async (req, res) => {
-    if(!req.body.pedido){
+    if(!req.body){
         res.status(400)
         throw new Error({message: "Por favor ingrese algo"})
     }
     const pedido = await Pedido.create({
         pedido: req.body.pedido,
+        productos: req.body.productos,
         user: req.user.id
     })
     res.status(201).json({pedido})
