@@ -31,9 +31,9 @@ const updatePedidos = asyncHandler( async (req, res) => {
         const pedidoUpdated = await Pedido.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.status(200).json(pedidoUpdated)
     }
-
     
 })
+
 
 const deletePedidos = asyncHandler( async (req, res) => {
     const pedido= await Pedido.findById(req.params.id)
