@@ -7,12 +7,12 @@ const getProductos = asyncHandler( async (req, res) =>{
 })
 
 const setProductos = asyncHandler( async (req, res) => {
-    if(!req.body.texto){
+    if(!req.body.producto){
         res.status(400)
         throw new Error({message: "Por favor ingrese algo"})
     }
     const producto = await Producto.create({
-        texto: req.body.texto,
+        producto: req.body.producto,
         user: req.user.id
     })
     res.status(201).json({producto})

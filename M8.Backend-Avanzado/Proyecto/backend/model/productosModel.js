@@ -6,14 +6,10 @@ const productoSchema = mongoose.Schema({
         required: true,
         ref:'User'
     },
-    texto: {
+    producto: {
         type: String,
-        required: [true, "Por favor teclea una descripción de la producto"]
+        required: [true, "Por favor teclea una descripción del producto"]
     },
-    completada: {
-        type: Boolean,
-        default: false
-    }
 }, {
     timestamps: true
 })

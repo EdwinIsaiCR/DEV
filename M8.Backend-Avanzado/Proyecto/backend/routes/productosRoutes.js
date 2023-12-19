@@ -3,15 +3,7 @@ const router = express.Router()
 const {getProductos, setProductos, updateProductos, deleteProductos} = require('../controllers/productosController')
 const {protect} = require('../middleware/authMiddleware')
 
-router.route('/').get(protect, getProducto).post(protect, setProducto)
-router.route('/:id').put(protect, updateProducto).delete(protect, deleteProducto)
-
-/* router.get('/', getTareas)
-
-router.post('/', setTareas)
-
-router.put('/:id', updateTareas)
-
-router.delete('/:id', deleteTareas) */
+router.route('/').get(protect, getProductos).post(protect, setProductos)
+router.route('/:id').put(protect, updateProductos).delete(protect, deleteProductos)
 
 module.exports = router
