@@ -16,9 +16,17 @@ import {
   useColorMode,
   useColorModeValue,
   GridItem,
-  Center,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
-import { Search2Icon, HamburgerIcon, SettingsIcon } from "@chakra-ui/icons";
+import {
+  Search2Icon,
+  HamburgerIcon,
+  SettingsIcon,
+  AddIcon,
+} from "@chakra-ui/icons";
 /* import CartIcon from './CartIcon' */
 /* import { useSession, signOut} from 'next-auth/react' */
 
@@ -30,7 +38,7 @@ const Layout = ({ children }) => {
         <title> Airbnb-Clone </title>
       </Head>
       <Grid
-      bg={'white'}
+        bg={"white"}
         h="200px"
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(4, 1fr)"
@@ -114,23 +122,26 @@ const Layout = ({ children }) => {
             </Button>
           </Box>
           <Box>
-            <Button colorScheme="teal" variant="solid">
+            <Button bg={"black"}>
               <SettingsIcon />
             </Button>
-          </Box>
-          <Box>
-            <Button
-              leftIcon={<HamburgerIcon />}
-              colorScheme="teal"
-              variant="solid"
-            >
-              <Image
-                src="https://cdn-icons-png.freepik.com/512/2648/2648307.png"
-                alt="logo"
-                width={8}
-                pos="relative"
-              />
-            </Button>
+            <Menu>
+             
+              <MenuButton
+                _hover={{ bg: "gray.500" }}
+                as={Button}
+                bg={"black"}
+                aria-label="Options"
+              >
+                <HamburgerIcon />
+              </MenuButton>
+            
+              <MenuList>
+                 <Link href='/signup'  passHref>
+                <MenuItem icon={<AddIcon />}>CreateAccount</MenuItem>
+                 </Link>
+              </MenuList>
+            </Menu>
           </Box>
         </GridItem>
         {/* <Stack
